@@ -60,7 +60,7 @@ class CropOverlayView: UIView {
     private func createNewLine() -> UIView {
         let view = UIView()
         view.frame = CGRect.zero
-        view.backgroundColor = .white
+        view.backgroundColor = boarderNormalColor
         addSubview(view)
         return view
     }
