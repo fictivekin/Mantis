@@ -105,7 +105,7 @@ class CropView: UIView {
         self.cropViewConfig = cropViewConfig
         
         imageContainer = ImageContainer()
-        gridOverlayView = CropOverlayView()
+        gridOverlayView = CropOverlayView(borderColor: cropViewConfig.cropOverlayViewBorderColor)
 
         super.init(frame: CGRect.zero)
         

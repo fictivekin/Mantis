@@ -15,6 +15,8 @@ public struct CropViewConfig {
     public var cropMaskVisualEffectType: CropMaskVisualEffectType = .blurDark
 
     public var cropMaskBackgroundColor: UIColor = .black
+    
+    public var cropOverlayViewBorderColor: UIColor = .white
 
     public var presetTransformationType: PresetTransformationType = .none
     

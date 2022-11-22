@@ -41,6 +41,12 @@ class CropOverlayView: UIView {
         }
     }
     
+    init(frame: CGRect = .zero, borderColor: UIColor) {
+        self.init(frame: frame)
+        boarderNormalColor = borderColor
+        boarderHintColor = borderColor
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         clipsToBounds = false
