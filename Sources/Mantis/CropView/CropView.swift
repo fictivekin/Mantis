@@ -60,7 +60,8 @@ class CropView: UIView {
     lazy var cropMaskViewManager = CropMaskViewManager(with: self,
                                                        cropRatio: CGFloat(getImageRatioH()),
                                                        cropShapeType: cropViewConfig.cropShapeType,
-                                                       cropMaskVisualEffectType: cropViewConfig.cropMaskVisualEffectType)
+                                                       cropMaskVisualEffectType: cropViewConfig.cropMaskVisualEffectType,
+                                                       cropMaskBackgroundColor: cropViewConfig.cropMaskBackgroundColor)
 
     var manualZoomed = false
     var forceFixedRatio = false

@@ -14,15 +14,18 @@ class CropMaskViewManager {
     
     var cropShapeType: CropShapeType = .rect
     var cropMaskVisualEffectType: CropMaskVisualEffectType = .blurDark
+    var cropMaskBackgroundColor: UIColor = .black
     
     init(with superview: UIView,
          cropRatio: CGFloat = 1.0,
          cropShapeType: CropShapeType = .rect,
-         cropMaskVisualEffectType: CropMaskVisualEffectType = .blurDark) {
+         cropMaskVisualEffectType: CropMaskVisualEffectType = .blurDark,
+         cropMaskBackgroundColor: UIColor = .black) {
         
         setup(in: superview, cropRatio: cropRatio)
         self.cropShapeType = cropShapeType
         self.cropMaskVisualEffectType = cropMaskVisualEffectType
+        self.cropMaskBackgroundColor = cropMaskBackgroundColor
     }
     
     private func setupOverlayView(in view: UIView, cropRatio: CGFloat = 1.0) {
@@ -34,8 +37,9 @@ class CropMaskViewManager {
     
     private func setupTranslucencyView(in view: UIView, cropRatio: CGFloat = 1.0) {
         visualEffectView = CropMaskVisualEffectView(cropShapeType: cropShapeType,
-                                                effectType: cropMaskVisualEffectType,
-                                                cropRatio: cropRatio)
+                                                    effectType: cropMaskVisualEffectType,
+                                                    cropRatio: cropRatio,
+                                                    backgroundColor: cropMaskBackgroundColor)
         visualEffectView.isUserInteractionEnabled = false
         view.addSubview(visualEffectView)
     }

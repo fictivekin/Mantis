@@ -13,7 +13,9 @@ public struct CropViewConfig {
     public var cropBorderColor: UIColor = .clear
     
     public var cropMaskVisualEffectType: CropMaskVisualEffectType = .blurDark
-    
+
+    public var cropMaskBackgroundColor: UIColor = .black
+
     public var presetTransformationType: PresetTransformationType = .none
     
     /// minimumZoomScale must be no less than 1
