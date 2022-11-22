@@ -36,8 +36,8 @@ class CropMaskViewManager {
     private func setupTranslucencyView(in view: UIView, cropRatio: CGFloat = 1.0, cropMaskBackgroundColor: UIColor) {
         visualEffectView = CropMaskVisualEffectView(cropShapeType: cropShapeType,
                                                     effectType: cropMaskVisualEffectType,
-                                                    cropRatio: cropRatio,
-                                                    backgroundColor: cropMaskBackgroundColor)
+                                                    backgroundColor: cropMaskBackgroundColor,
+                                                    cropRatio: cropRatio)
         visualEffectView.isUserInteractionEnabled = false
         view.addSubview(visualEffectView)
     }
