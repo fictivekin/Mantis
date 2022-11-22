@@ -227,7 +227,7 @@ class CropView: UIView {
     
     func resetUIFrame() {
         cropMaskViewManager.removeMaskViews()
-        cropMaskViewManager.setup(in: self, cropRatio: CGFloat(getImageRatioH()))
+        cropMaskViewManager.setup(in: self, cropRatio: CGFloat(getImageRatioH()), cropMaskBackgroundColor: cropViewConfig.cropMaskBackgroundColor)
         viewModel.resetCropFrame(by: getInitialCropBoxRect())
                 
         scrollView.transform = .identity
